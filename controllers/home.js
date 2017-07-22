@@ -1,4 +1,4 @@
-let getController=(req,res)=>{
+let getController=(req,res) => {
   let movieName=req.query.search
   if(movieName){
     let regexp=new RegExp("^"+movieName);
@@ -10,14 +10,14 @@ let getController=(req,res)=>{
 }
 
 
-let postController=(req,res)=>{
+let postController=(req,res) => {
   const body=req.body;
   let movie=new Movie({
     name:body.name,
     author:body.author
   });
 
-  movie.save((err,result)=>{
+  movie.save((err,result) => {
     if(err) console.error(err);
     res.render('index')});
 }
