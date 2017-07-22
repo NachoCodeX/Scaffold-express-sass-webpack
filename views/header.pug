@@ -1,0 +1,17 @@
+header.header
+   .container.container--header
+      label(class="menu__icon" for="menu")
+         i(class='icon-menu')
+      input(id="menu" type="checkbox")
+      nav.menu
+         ul.menu__ul
+            li.menu__li
+               a.menu__a(href="/") Home
+               
+            li.menu__li
+               a.menu__a(href="/api/movies") Movies
+               
+            li.menu__li
+               a.menu__a(href="#") FOO
+      form(action="/" method="GET" class="form--search")
+         input(type="search" class="form__search" name="search" placeholder="Search a movie...")

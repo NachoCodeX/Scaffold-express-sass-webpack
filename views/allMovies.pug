@@ -1,0 +1,19 @@
+extends base
+block titulo
+   |Movies
+block content
+   include header
+   main.main.container
+      -if(movies.length >0)
+         h1(style="text-align:center") ALL MOVIES
+         .movie__gallery
+            each m in movies
+               .movie__item
+                  p #{m.name}
+                  .movie__btns
+                     a(href='/api/movies/update/'+m.id class="btn") Edit
+                     form(action="/api/movies/"+m.id+"?_method=DELETE" method="POST")
+                        button(class="btn btn--danger" type="submit") Delete
+
+      -else 
+         h1(style="text-align:center") NO RESULT MATCH

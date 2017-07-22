@@ -1,0 +1,17 @@
+extends base
+block titulo
+   |Home
+block content
+   include header
+   main.main.container
+      h1.title.title--page UPDATE 
+      -if(errors)
+         ul.error__ul
+            each error in errors
+                  li.error__li #{error.msg}
+      form(action="/api/movies/update/"+movie.id+"?_method=PUT" class="form" method="POST")
+         input(class="form__input" type="text" name="name" placeholder="Name" value=movie.name)
+         input(class="form__input" type="text" name="author" placeholder="Author" value=movie.author)
+         input(class="form__submit" type="submit" value="Save")
+   
+   //- script(src="js/main.js")

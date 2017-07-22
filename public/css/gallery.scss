@@ -1,0 +1,35 @@
+.movie__gallery{
+
+}
+.movie__item{
+  margin-left: auto;
+  margin-right: auto;
+  background: #ccc;
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  max-width: 350px;
+}
+.movie__btns{
+  display: flex;
+  align-items: center;
+  // justify-content: space-around;
+  // background: #000;
+  // width: 100%;
+}
+
+.btn{
+  color: #000;
+  display: block;
+  border: 1px solid rgba(#000,0.1);
+  padding: 7px;
+  background: #ddd;
+  text-decoration: none;
+}
+.btn--danger{
+  color: #fff;
+  background: tomato;
+}

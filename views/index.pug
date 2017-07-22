@@ -1,9 +1,17 @@
-doctype html
-html
-   head
-      title Home
-      //- link(rel="stylesheet", href="css/style.css")
-   body
-      h1 WEBPACK
-      script(src="js/app.bundle.js")
-      
+extends base
+block titulo
+   |Home
+block content
+   include header
+   main.main.container
+      h1.title.title--page CREATE 
+      -if(errors)
+         ul.error__ul
+            each error in errors
+                  li.error__li #{error.msg}
+      form(class="form" method="POST")
+         input(class="form__input" type="text" name="name" placeholder="Name")
+         input(class="form__input" type="text" name="author" placeholder="Author")
+         input(class="form__submit" type="submit" value="Save")
+   
+   //- script(src="js/main.js")
